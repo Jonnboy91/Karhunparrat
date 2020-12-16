@@ -1,28 +1,83 @@
 /*OWN STYLES*/
 
-.header-text {
+.header {
+    background-image: url("images/karhu.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     text-align: center;
-    position: absolute;
+    height:100%;
+    width:auto;
 }
 
-.info-img{
-    
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info {
+    height: 100%;
+}
+
+.info-img {
+    background-image: url("images/viking.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: auto;
 }
 
 .info-txt{
+    background-color: saddlebrown;
+}
 
+.kumppanit {
+    height: 100%;
+    width: auto;
 }
 
 .kumppanit-img {
+    background-image: url("images/karhu.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: auto;
 }
 
 .kumppanit-txt {
+    background-color: blue;
+}
+
+.contact {
+    height: 100%;
 }
 
 .contact-img {
+    background-image: url("images/karhu.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: auto;
 }
 
 .contact-txt {
+    background-color: darkolivegreen;
+}
+
+.footer {
+    background-color: yellow;
+}
+
+li {
+    display:inline;
 }
 
 
@@ -50,8 +105,7 @@ body {
 
 * {
   font-family: 'Lato', Helvetica, sans-serif;
-  color: #333447;
-  line-height: 1.5;
+  color: pink;
 }
 
 /* TYPOGRAPHY */
@@ -84,6 +138,7 @@ p {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
+  margin: 0;
 }
 
 .font-light {
@@ -121,7 +176,7 @@ p {
 /* ==== GRID SYSTEM ==== */
 
 .container {
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -133,8 +188,7 @@ p {
 
 .row [class^="col"] {
   float: left;
-  margin: 0.5rem 2%;
-  min-height: 0.125rem;
+  min-height: 50rem;
 }
 
 .col-1,
@@ -173,7 +227,7 @@ p {
 }
 
 .col-6-sm {
-  width: 46%;
+  width: 50%;
 }
 
 .col-7-sm {
@@ -197,7 +251,7 @@ p {
 }
 
 .col-12-sm {
-  width: 96%;
+  width: 100%;
 }
 
 .row::after {
@@ -212,7 +266,7 @@ p {
 
 @media only screen and (min-width: 33.75em) {  /* 540px */
   .container {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -238,7 +292,7 @@ p {
   }
 
   .col-6 {
-    width: 46%;
+    width: 50%;
   }
 
   .col-7 {
@@ -262,7 +316,7 @@ p {
   }
 
   .col-12 {
-    width: 96%;
+    width: 100%;
   }
 
   .hidden-sm {
@@ -272,7 +326,6 @@ p {
 
 @media only screen and (min-width: 60em) { /* 960px */
   .container {
-    width: 75%;
-    max-width: 60rem;
+    width: 100%;
   }
 }
