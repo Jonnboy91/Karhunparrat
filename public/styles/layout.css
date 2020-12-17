@@ -318,6 +318,7 @@ html, body {
     left: 0;
     top: 0;
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 /* ROOT FONT STYLES */

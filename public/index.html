@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="fi">
 
@@ -7,9 +7,12 @@
     <meta charset="utf-8" />
     <meta property="og:title" content="Karhunparrat – Partaklubi – a Finnish Beard Club" />
     <meta property="twitter:title" content="Karhunparrat – Partaklubi – a Finnish Beard Club" />
-    <meta name="description" content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä.">
-    <meta property="og:description" content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä." />
-    <meta property="twitter:description" content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä." />
+    <meta name="description"
+        content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä.">
+    <meta property="og:description"
+        content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä." />
+    <meta property="twitter:description"
+        content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä." />
     <meta property="og:type" content="website" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="og:url" content="https://karhunparrat.fi" />
@@ -21,6 +24,7 @@
     <title>Karhunparrat</title>
 
     <link rel="stylesheet" href="styles/layout.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         function submitEmailForm(form) {
             var obj = new XMLHttpRequest();
@@ -41,15 +45,41 @@
             return false;
         }
     </script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 </head>
 
 <body class="container">
     <div class="header col-12 row">
         <div class="navbar">
             <ul>
-                <li><a href="#">Info</a></li>
-                <li><a href="#">Kumppanit</a></li>
-                <li><a href="#">Ota yhteyttä</a></li>
+                <li><a href="#info">Info</a></li>
+                <li><a href="#partners">Kumppanit</a></li>
+                <li><a href="#contact">Ota yhteyttä</a></li>
             </ul>
         </div>
         <div class="logo"><img src="styles/images/karhunparrat-valkoinen.png" alt="Karhunparrat logo">
@@ -58,43 +88,50 @@
         </div>
     </div>
     <div>
-        <div class="info row">
+        <div class="info row" id="info">
             <div class="col-6 info-img">
-                    <h3 class="subheading">Info</h3>
+                <h3 class="subheading">Info</h3>
             </div>
             <div class="col-6 info-txt">
-              <div class="textbox">
-                <p>
-                    Perustimme Karhunparrat-partaklubin yhdeksän miehen voimin kesäkuussa 2020. Karhunpartojen jäseniä
-                    yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Haluamme tuoda esille Suomen
-                    varhaista kulttuuriperintöä ja tehdä sen tunnetuksi kansainvälisesti.</p>
+                <div class="textbox">
+                    <p>
+                        Perustimme Karhunparrat-partaklubin yhdeksän miehen voimin kesäkuussa 2020. Karhunpartojen
+                        jäseniä
+                        yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Haluamme tuoda esille
+                        Suomen
+                        varhaista kulttuuriperintöä ja tehdä sen tunnetuksi kansainvälisesti.</p>
 
-                    <p>Klubimme jäsenet ovat toisilleen kuin veljiä. Vahvistamme yhteisöllisyyttä yhteisillä tekemisillä ja
-                    aktiivisella vuorovaikutuksella. Meille on suunniteltu ja luotu oma koru, jota kannamme ylpeydellä.</p>
+                    <p>Klubimme jäsenet ovat toisilleen kuin veljiä. Vahvistamme yhteisöllisyyttä yhteisillä tekemisillä
+                        ja
+                        aktiivisella vuorovaikutuksella. Meille on suunniteltu ja luotu oma koru, jota kannamme
+                        ylpeydellä.</p>
 
                     <p>Klubimme arvot perustuvat tasa-arvoon ja toisia kunnioittavaan asenteeseen. Kaikki jäsenemme ovat
-                    samanarvoisia. Olemme luoneet tiiviin yhteisön, jossa tuemme toisiamme elämän eri vaiheissa.</p>
+                        samanarvoisia. Olemme luoneet tiiviin yhteisön, jossa tuemme toisiamme elämän eri vaiheissa.</p>
 
-                  <p> Teemme yhteistyötä Viking Beard Alliance Swedenin sekä Norjan Midgård Beard Clubin kanssa.
-                    Tulevaisuudessa aiomme järjestää yhteisiä tapaamisia vuorovuosin.</p>
+                    <p> Teemme yhteistyötä Viking Beard Alliance Swedenin sekä Norjan Midgård Beard Clubin kanssa.
+                        Tulevaisuudessa aiomme järjestää yhteisiä tapaamisia vuorovuosin.</p>
 
-                  <h3>Karhunparrat somessa</h3>
-                  <a href="https://www.instagram.com/karhunparrat/" target="_blank" class="some"><img src="styles/images/instagram.png" alt="Karhunparrat Instagram"></a>
-                  <a href="https://www.facebook.com/groups/1243071796084747" target="_blank" class="some"><img src="styles/images/facebook.png" alt="Karhunparrat Facebook"></a>
-                  <a href="https://www.youtube.com/channel/UCVWYZCMeJnKv2FHGB-YqK8w" target="_blank" class="some"><img src="styles/images/youtube.png" alt="Karhunparrat YouTube"></a>
+                    <h3>Karhunparrat somessa</h3>
+                    <a href="https://www.instagram.com/karhunparrat/" target="_blank" class="some"><img
+                            src="styles/images/instagram.png" alt="Karhunparrat Instagram"></a>
+                    <a href="https://www.facebook.com/groups/1243071796084747" target="_blank" class="some"><img
+                            src="styles/images/facebook.png" alt="Karhunparrat Facebook"></a>
+                    <a href="https://www.youtube.com/channel/UCVWYZCMeJnKv2FHGB-YqK8w" target="_blank" class="some"><img
+                            src="styles/images/youtube.png" alt="Karhunparrat YouTube"></a>
 
 
-              </div>
+                </div>
             </div>
 
         </div>
-        <div class=" kumppanit row">
+        <div class=" kumppanit row" id="partners">
             <div class="col-6 kumppanit-img">
-                    <h3 class="subheading">Kumppanit</h3>
+                <h3 class="subheading">Kumppanit</h3>
             </div>
             <div class="col-6 kumppanit-txt">
-            <div class="textbox">
-                  <h3><b><a href="https://ga-shaving.fi/">G&A Shaving</a></b></h3>
+                <div class="textbox">
+                    <h3><b><a href="https://ga-shaving.fi/">G&A Shaving</a></b></h3>
                     <p>
                         Klubimme jäsenet ovat toisilleen kuin veljiä. Vahvistamme yhteisöllisyyttä yhteisillä
                         tekemisillä ja aktiivisella vuorovaikutuksella. Meille on suunniteltu ja luotu oma koru, jota
@@ -106,35 +143,36 @@
                         jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Haluamme tuoda
                         esille Suomen varhaista kulttuuriperintöä ja tehdä sen tunnetuksi kansainvälisesti.
                     </p>
-                      <h3><b><a href="https://www.instagram.com/hiiden_nahka/">Hiiden nahka</a></b></h3>
+                    <h3><b><a href="https://www.instagram.com/hiiden_nahka/">Hiiden nahka</a></b></h3>
                     <p>
                         Teemme yhteistyötä Viking Beard Alliance Swedenin sekä Norjan Midgård Beard Clubin kanssa.
                         Tulevaisuudessa aiomme järjestää yhteisiä tapaamisia vuorovuosin.
                     </p>
-                  </div>
+                </div>
             </div>
 
         </div>
-        <div class="contact-row row">
+        <div class="contact-row row" id="contact">
             <div class="col-6 contact-img">
-                    <h3 class="subheading">Ota yhteyttä</h3>
+                <h3 class="subheading">Ota yhteyttä</h3>
             </div>
             <div class="col-6 contact-txt">
 
-                        <form action="/ajax/email" class="contact-form" method="POST" onsubmit="return submitEmailForm(this);">
-                            <div>
-                                <input type="text" name="name" placeholder="Nimi" class="contact-form-input" required />
-                            </div>
-                            <div>
-                                <input type="email" name="email" placeholder="Sähköposti" class="contact-form-input" required />
-                            </div>
-                            <div>
-                                <textarea name="message" class="contact-form-input" placeholder="Viestisi Karhunparroille" required></textarea>
-                            </div>
-                            <div>
-                                <button type="submit">Lähetä</button>
-                            </div>
-                        </form>
+                <form action="/ajax/email" class="contact-form" method="POST" onsubmit="return submitEmailForm(this);">
+                    <div>
+                        <input type="text" name="name" placeholder="Nimi" class="contact-form-input" required />
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Sähköposti" class="contact-form-input" required />
+                    </div>
+                    <div>
+                        <textarea name="message" class="contact-form-input" placeholder="Viestisi Karhunparroille"
+                            required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Lähetä</button>
+                    </div>
+                </form>
             </div>
 
         </div>
@@ -143,38 +181,38 @@
     <!-- Copyright -->
     <div class="footer row row-footer">
 
-    <div class="col-4">
-      <div class="footer-box center">
-      <img src="styles/images/karhunparrat-valkoinen.png" alt="Karhunparrat logo">
-      </div>
-    </div>
+        <div class="col-4">
+            <div class="footer-box center">
+                <img src="styles/images/karhunparrat-valkoinen.png" alt="Karhunparrat logo">
+            </div>
+        </div>
 
-    <div class="col-4">
-      <div class="footer-box">
-        <h3>© 2020 Karhunparrat</h3>
-        <p>
-        Kaikki oikeudet pidätetään.
-    </p>
-    </div>
-  </div>
+        <div class="col-4">
+            <div class="footer-box">
+                <h3>© 2020 Karhunparrat</h3>
+                <p>
+                    Kaikki oikeudet pidätetään.
+                </p>
+            </div>
+        </div>
 
-    <div class="col-4">
-      <div class="footer-box">
-        <h3>Kuvakrediitit</h3>
-          <p>Zdenek Machacek</p>
-          <p>Taneli Lahtinen</p>
-          <p>Artem Maltsev</p>
-    </div>
-  </div>
+        <div class="col-4">
+            <div class="footer-box">
+                <h3>Kuvakrediitit</h3>
+                <p>Zdenek Machacek</p>
+                <p>Taneli Lahtinen</p>
+                <p>Artem Maltsev</p>
+            </div>
+        </div>
 
-    <div class="col-4">
-      <div class="footer-box">
-        <h3>Toteutus</h3>
-          <p>Jon Nesten</p>
-          <p>Severi Reivinen</p>
-          <p>Johanna Savinen</p>
-      </div>
-    </div>
+        <div class="col-4">
+            <div class="footer-box">
+                <h3>Toteutus</h3>
+                <p>Jon Nesten</p>
+                <p>Severi Reivinen</p>
+                <p>Johanna Savinen</p>
+            </div>
+        </div>
 
     </div>
 </body>
