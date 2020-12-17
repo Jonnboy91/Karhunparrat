@@ -1,0 +1,446 @@
+/*OWN STYLES*/
+
+.header {
+    background-image: url("images/karhu.jfif");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: auto;
+}
+
+.logo {
+    background-image: url("images/viking.jfif");
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar {}
+
+.navbar a {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 14px 14px;
+    text-transform: uppercase;
+    display: -webkit-inline-box;
+    text-decoration: none;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.navbar li {
+    background-color: saddlebrown;
+    border-radius: 50px;
+    margin: 10px;
+    display: -webkit-inline-box;
+}
+
+.navbar li:hover {
+    background-color: yellow;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info {
+    height: 100%;
+}
+
+.info-img {
+    background-image: url("images/viking.jfif");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.info-txt {
+    background-color: saddlebrown;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    max-height: 800px;
+    overflow: auto;
+}
+
+.kumppanit {
+    height: 100%;
+}
+
+.kumppanit-img {
+    background-image: url("images/karhu.jfif");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.kumppanit-txt {
+    background-color: blue;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    max-height: 800px;
+    overflow: auto;
+}
+
+.contact {
+    height: 100%;
+}
+
+.contact-img {
+    background-image: url("images/viking.jfif");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.contact-txt {
+    background-color: darkolivegreen;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    max-height: 800px;
+    overflow: auto;
+}
+
+.footer {
+    background-color: yellow;
+}
+
+/*Contact form start*/
+
+.contact {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: .5s;
+    background-color: #fff;
+}
+
+.contact section {
+    text-align: right;
+    padding: 10px;
+}
+
+.contact section a {
+    border: none;
+    text-decoration: none;
+    outline: none;
+    color: #e05e02;
+}
+
+.contact:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contact-form {
+    position: absolute;
+    max-width: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contact-form-input, .contact-form button {
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 24px;
+    letter-spacing: 1px;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #e05e02;
+    padding: 20px;
+    color: #fff;
+}
+
+.contact-form div:nth-child(1), .contact-form div:nth-child(2) {
+    position: relative;
+}
+
+.contact-form div:nth-child(1)::after, .contact-form div:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.contact-form textarea {
+    overflow: auto;
+    height: 100px;
+    text-transform: none;
+}
+
+/*Contact form end*/
+
+/* SIMPLE GRID STARTS HERE */
+
+/**
+*** SIMPLE GRID
+*** (C) ZACH COLE 2016
+**/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+html, body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    font-size: 100%;
+}
+
+/* ROOT FONT STYLES */
+
+* {
+    font-family: 'Lato', Helvetica, sans-serif;
+    color: pink;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.375rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.875rem;
+}
+
+p {
+    font-size: 1.125rem;
+    font-weight: 200;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0px 50px 0px 50px;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-heavy {
+    font-weight: 700;
+}
+
+/* POSITIONING */
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.justify {
+    text-align: justify;
+}
+
+/* ==== GRID SYSTEM ==== */
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+}
+
+.row [class^="col"] {
+    float: left;
+    min-height: 50rem;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    width: 100%;
+}
+
+.col-1-sm {
+    width: 4.33%;
+}
+
+.col-2-sm {
+    width: 12.66%;
+}
+
+.col-3-sm {
+    width: 21%;
+}
+
+.col-4-sm {
+    width: 29.33%;
+}
+
+.col-5-sm {
+    width: 37.66%;
+}
+
+.col-6-sm {
+    width: 50%;
+}
+
+.col-7-sm {
+    width: 54.33%;
+}
+
+.col-8-sm {
+    width: 62.66%;
+}
+
+.col-9-sm {
+    width: 71%;
+}
+
+.col-10-sm {
+    width: 79.33%;
+}
+
+.col-11-sm {
+    width: 87.66%;
+}
+
+.col-12-sm {
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hidden-sm {
+    display: none;
+}
+
+@media only screen and (min-width: 33.75em) {
+    /* 540px */
+    .container {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 45em) {
+    /* 720px */
+    .col-1 {
+        width: 4.33%;
+    }
+    .col-2 {
+        width: 12.66%;
+    }
+    .col-3 {
+        width: 21%;
+    }
+    .col-4 {
+        width: 29.33%;
+    }
+    .col-5 {
+        width: 37.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 54.33%;
+    }
+    .col-8 {
+        width: 62.66%;
+    }
+    .col-9 {
+        width: 71%;
+    }
+    .col-10 {
+        width: 79.33%;
+    }
+    .col-11 {
+        width: 87.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+    .hidden-sm {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    /* 960px */
+    .container {
+        width: 100%;
+    }
+}
