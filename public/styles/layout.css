@@ -1,7 +1,10 @@
 /*OWN STYLES*/
 
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Raleway:wght@400;700&display=swap');
+
 .header {
-    background-image: url("images/karhu.jfif");
+    background-image: url("images/karhunparrat-bg-desktop.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,50 +15,69 @@
     width: auto;
 }
 
+
 .logo {
-    background-image: url("images/viking.jfif");
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  margin: auto;
+  margin-top:35vh;
+  padding: 0 2rem;
 }
 
-.navbar {}
+.logo img{
+  width: 300px;
+  height: auto;
+}
+
+@media only screen and (max-width: 60em) {
+
+  .header {
+      background-image: url("images/karhunparrat-bg-mobile.jpg");
+  }
+
+  .logo img{
+    width: 200px;
+    height: auto;
+  }
+
+}
+
+@media only screen and (max-width: 325px) {
+  .logo {
+    margin-top:15vh;
+  }
+
+}
 
 .navbar a {
     color: white;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 14px 14px;
-    text-transform: uppercase;
+    padding: 14px 50px;
     display: -webkit-inline-box;
     text-decoration: none;
 }
 
+@media only screen and (max-width: 45em) {
+  .navbar a {
+      font-size: 14px;
+      padding: 14px 14px;
+  }
+}
+
 .navbar ul {
     margin: 0;
-    padding: 0;
+    padding: 1.5rem 0 0 0;
     font-size: 0;
 }
 
 .navbar li {
     background-color: saddlebrown;
     border-radius: 50px;
-    margin: 10px;
+    margin: 8px;
     display: -webkit-inline-box;
 }
 
 .navbar li:hover {
-    background-color: yellow;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: #4F4905;
 }
 
 .info {
@@ -63,22 +85,24 @@
 }
 
 .info-img {
-    background-image: url("images/viking.jfif");
-    background-attachment: fixed;
+    background-image: url("images/karhunparrat-img1-desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .info-txt {
-    background-color: saddlebrown;
+    background-color: #4F2605;
     display: -webkit-flex;
     display: flex;
     align-items: center;
-    max-height: 800px;
-    overflow: auto;
+
 }
 
 .kumppanit {
@@ -86,49 +110,110 @@
 }
 
 .kumppanit-img {
-    background-image: url("images/karhu.jfif");
-    background-attachment: fixed;
+    background-image: url("images/karhunparrat-img2-desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .kumppanit-txt {
-    background-color: blue;
+    background-color: #05374F;
     display: -webkit-flex;
     display: flex;
     align-items: center;
-    max-height: 800px;
-    overflow: auto;
 }
 
-.contact {
+.contact-row {
     height: 100%;
 }
 
 .contact-img {
-    background-image: url("images/viking.jfif");
-    background-attachment: fixed;
+    background-image: url("images/karhunparrat-img3-desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 60em) {
+
+  .info-img {
+      background-image: url("images/karhunparrat-img1-mobile.jpg");
+  }
+
+  .kumppanit-img {
+      background-image: url("images/karhunparrat-img2-mobile.jpg");
+  }
+
+  .contact-img {
+      background-image: url("images/karhunparrat-img3-mobile.jpg");
+  }
 }
 
 .contact-txt {
-    background-color: darkolivegreen;
+    background-color: #4F4905;
     display: -webkit-flex;
     display: flex;
     align-items: center;
     max-height: 800px;
-    overflow: auto;
 }
 
+@media only screen and (max-width: 60em) {
+  .contact-txt {
+      padding:30px 0px;
+  }
+}
+
+
 .footer {
-    background-color: yellow;
+    background-color: #000000;
+}
+
+.footer img  {
+    width: 17rem;
+}
+
+.footer-box {
+  padding: 2rem;
+}
+
+.textbox {
+  padding: 50px;
+}
+
+@media only screen and (max-width: 60em) {
+  .textbox {
+    padding: 35px;
+  }
+
+  .footer img  {
+      width: 10rem;
+      padding-top: 2rem;
+  }
+
+  .footer-box {
+    padding: 0px 35px;
+    text-align: center;
+  }
+}
+
+.some {
+  padding: 1rem 1.5rem 0rem 0rem;
+}
+
+.some img {
+  width: 2.6rem;
 }
 
 /*Contact form start*/
@@ -163,17 +248,15 @@
 }
 
 .contact-form {
-    position: absolute;
-    max-width: 500px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 90%;
     border-radius: 20px;
     overflow: hidden;
+    color: #000;
+    margin: auto;
 }
 
 .contact-form-input, .contact-form button {
@@ -186,10 +269,11 @@
     border: none;
     width: 100%;
     outline: none;
+    color: #000;
 }
 
 .contact-form button {
-    background-color: #e05e02;
+    background-color: #322F08;
     padding: 20px;
     color: #fff;
 }
@@ -209,10 +293,11 @@
 }
 
 .contact-form textarea {
+    text-transform: uppercase;
     overflow: auto;
     height: 100px;
-    text-transform: none;
 }
+
 
 /*Contact form end*/
 
@@ -223,7 +308,7 @@
 *** (C) ZACH COLE 2016
 **/
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+
 html, body {
     background-color: black;
     height: 100%;
@@ -238,18 +323,20 @@ html, body {
 /* ROOT FONT STYLES */
 
 * {
-    font-family: 'Lato', Helvetica, sans-serif;
-    color: pink;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
 }
 
 /* TYPOGRAPHY */
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 0rem;
 }
 
 h2 {
     font-size: 2rem;
+    margin-top: 0rem;
 }
 
 h3 {
@@ -268,12 +355,33 @@ h6 {
     font-size: 0.875rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+
+.subheading {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 60em) {
+      h1 {
+          font-size: 2.6rem;
+      }
+
+      h2 {
+          font-size: 1.8rem;
+      }
+}
+
 p {
     font-size: 1.125rem;
     font-weight: 200;
     line-height: 1.8;
     margin: 0;
-    padding: 0px 50px 0px 50px;
+    padding-bottom: 1rem;
 }
 
 .font-light {
@@ -324,6 +432,22 @@ p {
 .row [class^="col"] {
     float: left;
     min-height: 50rem;
+    flex-wrap: wrap;
+}
+
+.row-footer [class^="col"] {
+    min-height: 5rem;
+}
+
+@media only screen and (max-width: 60em) {
+  .row [class^="col"] {
+      min-height: 15rem;
+  }
+
+  .row-footer [class^="col"] {
+      min-height: 1rem;
+  }
+
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
@@ -343,7 +467,7 @@ p {
 }
 
 .col-4-sm {
-    width: 29.33%;
+    width: 25%;
 }
 
 .col-5-sm {
@@ -351,7 +475,7 @@ p {
 }
 
 .col-6-sm {
-    width: 50%;
+    width: 100%;
 }
 
 .col-7-sm {
@@ -407,7 +531,7 @@ p {
         width: 21%;
     }
     .col-4 {
-        width: 29.33%;
+        width: 25%;
     }
     .col-5 {
         width: 37.66%;
@@ -435,6 +559,13 @@ p {
     }
     .hidden-sm {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 60em) {
+    /* 540px */
+    .col-6 {
+        width: 100%;
     }
 }
 
