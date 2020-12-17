@@ -2,13 +2,55 @@
 
 .header {
     background-image: url("images/karhu.jfif");
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     text-align: center;
-    height:100%;
-    width:auto;
+    height: 100%;
+    width: auto;
 }
+
+.logo {
+    background-image: url("images/viking.jfif");
+    position: absolute;
+    height:100px;
+    width:100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar {
+}
+
+    .navbar a {
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 14px 14px;
+        text-transform: uppercase;
+        display: -webkit-inline-box;
+        text-decoration: none;
+    }
+
+    .navbar ul {
+        margin: 0;
+        padding: 0;
+        font-size:0;
+    }
+
+    .navbar li {
+        background-color: saddlebrown;
+        border-radius: 50px;
+        margin: 10px;
+        display: -webkit-inline-box;
+    }
+
+    .navbar li:hover{
+        background-color: yellow;
+    }
 
 .centered {
     position: absolute;
@@ -23,35 +65,44 @@
 
 .info-img {
     background-image: url("images/viking.jfif");
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     text-align: center;
-    height: 100%;
-    width: auto;
 }
 
-.info-txt{
+.info-txt {
     background-color: saddlebrown;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    max-height: 800px;
+    overflow: auto;
 }
 
 .kumppanit {
     height: 100%;
-    width: auto;
 }
 
 .kumppanit-img {
     background-image: url("images/karhu.jfif");
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     text-align: center;
-    height: 100%;
-    width: auto;
 }
 
 .kumppanit-txt {
     background-color: blue;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    max-height: 800px;
+    overflow: auto;
 }
 
 .contact {
@@ -59,27 +110,27 @@
 }
 
 .contact-img {
-    background-image: url("images/karhu.jfif");
+    background-image: url("images/viking.jfif");
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     text-align: center;
-    height: 100%;
-    width: auto;
 }
 
 .contact-txt {
     background-color: darkolivegreen;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    max-height: 800px;
+    overflow: auto;
 }
 
 .footer {
     background-color: yellow;
 }
-
-li {
-    display:inline;
-}
-
 
 /* SIMPLE GRID STARTS HERE */
 /**
@@ -91,105 +142,106 @@ li {
 
 html,
 body {
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  top: 0;
-  font-size: 100%;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    font-size: 100%;
 }
 
 /* ROOT FONT STYLES */
 
 * {
-  font-family: 'Lato', Helvetica, sans-serif;
-  color: pink;
+    font-family: 'Lato', Helvetica, sans-serif;
+    color: pink;
 }
 
 /* TYPOGRAPHY */
 
 h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.375rem;
+    font-size: 1.375rem;
 }
 
 h4 {
-  font-size: 1.125rem;
+    font-size: 1.125rem;
 }
 
 h5 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 h6 {
-  font-size: 0.875rem;
+    font-size: 0.875rem;
 }
 
 p {
-  font-size: 1.125rem;
-  font-weight: 200;
-  line-height: 1.8;
-  margin: 0;
+    font-size: 1.125rem;
+    font-weight: 200;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0px 50px 0px 50px;
 }
 
 .font-light {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .font-regular {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .font-heavy {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 /* POSITIONING */
 
 .left {
-  text-align: left;
+    text-align: left;
 }
 
 .right {
-  text-align: right;
+    text-align: right;
 }
 
 .center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .justify {
-  text-align: justify;
+    text-align: justify;
 }
 
 /* ==== GRID SYSTEM ==== */
 
 .container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .row {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
-.row [class^="col"] {
-  float: left;
-  min-height: 50rem;
-}
+    .row [class^="col"] {
+        float: left;
+        min-height: 50rem;
+    }
 
 .col-1,
 .col-2,
@@ -203,129 +255,129 @@ p {
 .col-10,
 .col-11,
 .col-12 {
-  width: 96%;
+    width: 100%;
 }
 
 .col-1-sm {
-  width: 4.33%;
+    width: 4.33%;
 }
 
 .col-2-sm {
-  width: 12.66%;
+    width: 12.66%;
 }
 
 .col-3-sm {
-  width: 21%;
+    width: 21%;
 }
 
 .col-4-sm {
-  width: 29.33%;
+    width: 29.33%;
 }
 
 .col-5-sm {
-  width: 37.66%;
+    width: 37.66%;
 }
 
 .col-6-sm {
-  width: 50%;
+    width: 50%;
 }
 
 .col-7-sm {
-  width: 54.33%;
+    width: 54.33%;
 }
 
 .col-8-sm {
-  width: 62.66%;
+    width: 62.66%;
 }
 
 .col-9-sm {
-  width: 71%;
+    width: 71%;
 }
 
 .col-10-sm {
-  width: 79.33%;
+    width: 79.33%;
 }
 
 .col-11-sm {
-  width: 87.66%;
+    width: 87.66%;
 }
 
 .col-12-sm {
-  width: 100%;
+    width: 100%;
 }
 
 .row::after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .hidden-sm {
-  display: none;
+    display: none;
 }
 
-@media only screen and (min-width: 33.75em) {  /* 540px */
-  .container {
-    width: 100%;
-  }
+@media only screen and (min-width: 33.75em) { /* 540px */
+    .container {
+        width: 100%;
+    }
 }
 
-@media only screen and (min-width: 45em) {  /* 720px */
-  .col-1 {
-    width: 4.33%;
-  }
+@media only screen and (min-width: 45em) { /* 720px */
+    .col-1 {
+        width: 4.33%;
+    }
 
-  .col-2 {
-    width: 12.66%;
-  }
+    .col-2 {
+        width: 12.66%;
+    }
 
-  .col-3 {
-    width: 21%;
-  }
+    .col-3 {
+        width: 21%;
+    }
 
-  .col-4 {
-    width: 29.33%;
-  }
+    .col-4 {
+        width: 29.33%;
+    }
 
-  .col-5 {
-    width: 37.66%;
-  }
+    .col-5 {
+        width: 37.66%;
+    }
 
-  .col-6 {
-    width: 50%;
-  }
+    .col-6 {
+        width: 50%;
+    }
 
-  .col-7 {
-    width: 54.33%;
-  }
+    .col-7 {
+        width: 54.33%;
+    }
 
-  .col-8 {
-    width: 62.66%;
-  }
+    .col-8 {
+        width: 62.66%;
+    }
 
-  .col-9 {
-    width: 71%;
-  }
+    .col-9 {
+        width: 71%;
+    }
 
-  .col-10 {
-    width: 79.33%;
-  }
+    .col-10 {
+        width: 79.33%;
+    }
 
-  .col-11 {
-    width: 87.66%;
-  }
+    .col-11 {
+        width: 87.66%;
+    }
 
-  .col-12 {
-    width: 100%;
-  }
+    .col-12 {
+        width: 100%;
+    }
 
-  .hidden-sm {
-    display: block;
-  }
+    .hidden-sm {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 60em) { /* 960px */
-  .container {
-    width: 100%;
-  }
+    .container {
+        width: 100%;
+    }
 }
