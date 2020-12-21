@@ -27,24 +27,49 @@
   height: auto;
 }
 
+
+
+@media only screen and (max-width: 1281px) {
+
+    .logo {
+        margin-top: 30vh;
+    }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+}
+
 @media only screen and (max-width: 60em) {
 
-  .header {
-      background-image: url("images/karhunparrat-bg-mobile.jpg");
-  }
+    .header {
+        background-image: url("images/karhunparrat-bg-mobile.jpg");
+        background-attachment: local;
+    }
 
-  .logo img{
-    width: 200px;
-    height: auto;
-  }
+    .logo img {
+        width: 170px;
+        height: auto;
+    }
+}
 
+@media only screen and (max-width: 380px) {
+
+    .logo {
+        margin-top: 27vh;
+    }
 }
 
 @media only screen and (max-width: 325px) {
-  .logo {
-    margin-top:15vh;
-  }
 
+    .logo {
+        margin-top: 20vh;
+    }
+    .logo img {
+        width: 130px;
+        height: auto;
+    }
 }
 
 .navbar a {
@@ -85,7 +110,7 @@
 }
 
 .info-img {
-    background-image: url("images/karhunparrat-img1-desktop.jpg");
+    background-image: url("images/karhunparrat-img1-new-desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,7 +159,7 @@
 }
 
 .contact-img {
-    background-image: url("images/karhunparrat-img3-desktop.jpg");
+    background-image: url("images/karhunparrat-img3-new-desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,7 +174,7 @@
 @media only screen and (max-width: 60em) {
 
   .info-img {
-      background-image: url("images/karhunparrat-img1-mobile.jpg");
+      background-image: url("images/karhunparrat-img1-new-mobile.jpg");
   }
 
   .kumppanit-img {
@@ -157,7 +182,7 @@
   }
 
   .contact-img {
-      background-image: url("images/karhunparrat-img3-mobile.jpg");
+      background-image: url("images/karhunparrat-img3-new-mobile.jpg");
   }
 }
 
@@ -361,10 +386,28 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+h3 a{
+    font-family: 'DM Serif Display', serif;
+    text-decoration:none;
+    color:#70ADCC;
+    font-size:1.8rem;
+}
+
+h3 a:hover {
+    color: #fff;
+}
+
 .subheading {
-    font-size: 3rem;
+    font-size: 3.4rem;
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width: 60em) {
+
+    .subheading {
+        font-size: 3rem;
+    }
 }
 
 @media only screen and (max-width: 60em) {
