@@ -25,26 +25,6 @@
 
     <link rel="stylesheet" href="styles/layout.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        function submitEmailForm(form) {
-            var obj = new XMLHttpRequest();
-            obj.onreadystatechange = function () {
-                if (obj.readyState == 4) {
-                    if (obj.status == 200) {
-                        var res = JSON.parse(obj.responseText);
-                        alert(res.message);
-                    }
-                    else {
-                        alert("XMLHttp status " + obj.status + ": " + obj.statusText);
-                    }
-                }
-            };
-            obj.open("post", form.action, true);
-            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
-            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value }));
-            return false;
-        }
-    </script>
     <script>
         $(document).ready(function () {
             // Add smooth scrolling to all links
@@ -151,7 +131,9 @@
             </div>
             <div class="col-6 contact-txt">
 
-                <form action="/ajax/email" class="contact-form" method="POST" onsubmit="return submitEmailForm(this);">
+                <form action="mail.php" class="contact-form" method="POST" target="POPUPW"
+                onsubmit="POPUPW = window.open('about:blank','POPUPW',
+                'width=600,height=400');">
                     <div>
                         <input type="text" name="name" placeholder="Nimi" class="contact-form-input" required />
                     </div>
@@ -159,8 +141,7 @@
                         <input type="email" name="email" placeholder="Sähköposti" class="contact-form-input" required />
                     </div>
                     <div>
-                        <textarea name="message" class="contact-form-input" placeholder="Viestisi Karhunparroille"
-                            required></textarea>
+                        <textarea name="message" class="contact-form-input" placeholder="Viestisi Karhunparroille" required></textarea>
                     </div>
                     <div>
                         <button type="submit">Lähetä</button>
