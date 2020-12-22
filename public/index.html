@@ -147,9 +147,11 @@
                         <div id="result"></div>
                     </div>
                 </form>
+
                 <script>
                     $(document).ready(function () {
                         //send button click
+
                         $('#sendMail').on('click', function (e) {
 
                             e.preventDefault();
@@ -159,7 +161,7 @@
                                 if (res.result === true) {
                                     $('#result').html('Kiitos viestistäsi');
                                 } else {
-                                    $('#result').html('Täytithän kaikki kohdat');
+                                    $('#result').html('Täytithän kaikki kohdat oikein');
                                 }
                             });
                         });
