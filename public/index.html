@@ -8,11 +8,11 @@
     <meta property="og:title" content="Karhunparrat – Partaklubi – a Finnish Beard Club" />
     <meta property="twitter:title" content="Karhunparrat – Partaklubi – a Finnish Beard Club" />
     <meta name="description"
-          content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä.">
+        content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä.">
     <meta property="og:description"
-          content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä." />
+        content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä." />
     <meta property="twitter:description"
-          content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä." />
+        content="Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan. Tutustu ja ota yhteyttä." />
     <meta property="og:type" content="website" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="og:url" content="https://karhunparrat.fi" />
@@ -37,7 +37,7 @@
                     event.preventDefault();
 
                     // Store hash
-                    var hash = this.hash;
+                    let hash = this.hash;
 
                     // Using jQuery's animate() method to add smooth page scroll
                     // The optional number (0) specifies the number of milliseconds it takes to scroll to the specified area. 0 for no dealy.
@@ -49,6 +49,24 @@
                         window.location.hash = hash;
                     });
                 } // End if
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            //send button click
+            $('#sendMail').on('click', function (e) {
+
+                e.preventDefault();
+                $.post('mail.php', $('#myForm').serialize(), function (data) {
+                    //show the results if the mail was sent or not
+                    let res = $.parseJSON(data);
+                    if (res.result === true) {
+                        $('#result').html('Kiitos viestistäsi');
+                    } else {
+                        $('#result').html('Täytithän kaikki kohdat oikein');
+                    }
+                });
             });
         });
     </script>
@@ -76,28 +94,36 @@
             <div class="col-6 info-txt">
                 <div class="textbox">
                     <p>
-                        Karhunparrat on suomalainen ja itsenäinen partaklubi, joka perustettiin yhdeksän miehen voimin kesäkuussa 2020.
+                        Karhunparrat on suomalainen ja itsenäinen partaklubi, joka perustettiin yhdeksän miehen voimin
+                        kesäkuussa 2020.
                         Karhunpartojen jäseniä yhdistää rakkaus partaan ja suomalaiseen kulttuuriin sekä mytologiaan.
-                        Haluamme tuoda esille Suomen varhaista kulttuuriperintöä ja tehdä sen tunnetuksi kansainvälisesti.
+                        Haluamme tuoda esille Suomen varhaista kulttuuriperintöä ja tehdä sen tunnetuksi
+                        kansainvälisesti.
                     </p>
 
                     <p>
                         Klubimme arvot perustuvat tasa-arvoon ja toisten kunnioittamiseen.
-                        Kaikki jäsenemme ovat samanarvoisia ja olemme toisillemme kuin veljiä. Olemme luoneet tiiviin yhteisön, jossa tuemme toisiamme elämän eri vaiheissa.
+                        Kaikki jäsenemme ovat samanarvoisia ja olemme toisillemme kuin veljiä. Olemme luoneet tiiviin
+                        yhteisön, jossa tuemme toisiamme elämän eri vaiheissa.
                         Vahvistamme yhteisöllisyyttä yhteisillä tekemisillä ja aktiivisella vuorovaikutuksella.
                         Meille on suunniteltu ja luotu oma koru, jota kannamme ylpeydellä.
                     </p>
 
                     <p>
-                        Teemme yhteistyötä myös muiden Pohjoismaiden itsenäisten partaklubien kanssa, kuten Viking Beard Alliance Sweden, Norjan Midgård Beard Club sekä Tanskan Bearded Northmen.
+                        Teemme yhteistyötä myös muiden Pohjoismaiden itsenäisten partaklubien kanssa, kuten Viking Beard
+                        Alliance Sweden, Norjan Midgård Beard Club sekä Tanskan Bearded Northmen.
                     </p>
 
-                    <p><a href="styles/images/karhunparrat-perustuslaki.pdf" target="_blank">Avaa Karhunpartojen Perustuslaki (.pdf)</a></p>
-                    
+                    <p><a href="styles/images/karhunparrat-perustuslaki.pdf" target="_blank">Avaa Karhunpartojen
+                            Perustuslaki (.pdf)</a></p>
+
                     <h3>Karhunparrat somessa</h3>
-                    <a href="https://www.instagram.com/karhunparrat/" target="_blank" class="some"><img src="styles/images/instagram.png" alt="Karhunparrat Instagram"></a>
-                    <a href="https://www.facebook.com/groups/1243071796084747" target="_blank" class="some"><img src="styles/images/facebook.png" alt="Karhunparrat Facebook"></a>
-                    <a href="https://www.youtube.com/channel/UCVWYZCMeJnKv2FHGB-YqK8w" target="_blank" class="some"><img src="styles/images/youtube.png" alt="Karhunparrat YouTube"></a>
+                    <a href="https://www.instagram.com/karhunparrat/" target="_blank" class="some"><img
+                            src="styles/images/instagram.png" alt="Karhunparrat Instagram"></a>
+                    <a href="https://www.facebook.com/groups/1243071796084747" target="_blank" class="some"><img
+                            src="styles/images/facebook.png" alt="Karhunparrat Facebook"></a>
+                    <a href="https://www.youtube.com/channel/UCVWYZCMeJnKv2FHGB-YqK8w" target="_blank" class="some"><img
+                            src="styles/images/youtube.png" alt="Karhunparrat YouTube"></a>
 
 
                 </div>
@@ -116,7 +142,8 @@
                     </p>
                     <h3><a href="https://www.tulimetsa.fi/" target="_blank">Tulimetsä</a></h3>
                     <p>
-                        Kimmo Tulimetsä on monitaitoinen taideseppä, joka takoo raudasta koruja ja esineitä sekä valaa hopea- ja pronssikoruja.
+                        Kimmo Tulimetsä on monitaitoinen taideseppä, joka takoo raudasta koruja ja esineitä sekä valaa
+                        hopea- ja pronssikoruja.
                     </p>
                     <h3><a href="https://www.instagram.com/hiiden_nahka/" target="_blank">Hiiden nahka</a></h3>
                     <p>
@@ -134,43 +161,22 @@
 
                 <form method="POST" class="contact-form" id="myForm" action="mail.php">
                     <div>
-                        <input type="text" name="name" placeholder="Nimi" class="contact-form-input" id="name" required />
+                        <input type="text" name="name" placeholder="Nimi" class="contact-form-input" id="name"
+                            required />
                     </div>
                     <div>
-                        <input type="email" name="email" placeholder="Sähköposti" class="contact-form-input" id="email" required />
+                        <input type="email" name="email" placeholder="Sähköposti" class="contact-form-input" id="email"
+                            required />
                     </div>
                     <div>
-                        <textarea name="message" class="contact-form-input" placeholder="Viestisi Karhunparroille" id="message" required></textarea>
+                        <textarea name="message" class="contact-form-input" placeholder="Viestisi Karhunparroille"
+                            id="message" required></textarea>
                     </div>
                     <div>
                         <button type="submit" id="sendMail">Lähetä</button>
                         <div id="result"></div>
                     </div>
                 </form>
-
-                <script>
-                    $(document).ready(function () {
-                        //send button click
-
-                        $('#sendMail').on('click', function (e) {
-
-                            e.preventDefault();
-                            $.post('mail.php', $('#myForm').serialize(), function (data) {
-                                //show the results if the mail was sent or not
-                                var res = $.parseJSON(data);
-                                if (res.result === true) {
-                                    $('#result').html('Kiitos viestistäsi');
-                                } else {
-                                    $('#result').html('Täytithän kaikki kohdat oikein');
-                                }
-                            });
-                        });
-
-
-                    });
-                </script>
-
-
             </div>
 
         </div>
